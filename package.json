@@ -34,7 +34,12 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "responsive-grid",
+    "flat-list",
+    "list-view",
+    "section-list",
+    "grid-view"
   ],
   "repository": "https://github.com/Daniil8k/grid-flatlist-react-native",
   "author": "Daniil <93822098+Daniil8k@users.noreply.github.com> (https://github.com/Daniil8k)",
