@@ -6,7 +6,9 @@ Simple [FlatList](https://reactnative.dev/docs/flatlist#itemseparatorcomponent) 
 
 ⭐ No stretching last item
 
-⭐ Nice always the same gap
+⭐ Spacing between items
+
+⭐ Shadow around elements not clipped
 
 ![vs](https://user-images.githubusercontent.com/93822098/154815970-735fad6c-6204-46ef-aae3-7f82ac585c80.png#gh-light-mode-only#gh-light-mode-only)
 ![vs dark](https://user-images.githubusercontent.com/93822098/154816485-0bee3d2d-4490-426b-b48b-287ec280acfd.png#gh-dark-mode-only)
@@ -32,7 +34,7 @@ import GridFlatList from 'grid-flatlist-react-native';
   data={[1,2,3,4,5,6]}
   renderItem={(item) => (<Text>{item}</Text>)}
   gap={10}
-  paddingHorizontal={10}
+  paddingHorizontal={10} // Shadow around elements will not be clipped
 />
 ```
 
