@@ -1,8 +1,10 @@
 import * as React from 'react';
 
-import { View, StyleSheet, FlatList } from 'react-native';
+import { View, StyleSheet, FlatList, FlatListProps } from 'react-native';
 
-interface GridFlatListInterface extends FlatList<any> {
+type SimpleSpread<L, R> = R & Pick<L, Exclude<keyof L, keyof R>>;
+
+interface ExtraProps {
   data: any[];
   renderItem: Function;
   numColumns?: number;
@@ -11,13 +13,16 @@ interface GridFlatListInterface extends FlatList<any> {
   paddingTop?: number;
 }
 
+interface GridFlatListInterface
+  extends SimpleSpread<FlatListProps<any>, ExtraProps> {}
+
 export default function GridFlatList({
   data,
   renderItem,
   numColumns = 2,
   gap = 12,
-  paddingHorizontal = 0,
-  paddingTop = 0,
+  paddingHorizontal = 2,
+  paddingTop = 2,
   ...props
 }: GridFlatListInterface) {
   const firstRowElementStyle = (index: number) => {
@@ -47,35 +52,36 @@ export default function GridFlatList({
     return null;
   };
 
+  const getKey = (item: any, index: number) => {
+    return item.id ? item.id : 'grid-flat-list-item_' + index + Math.random();
+  };
+
   return (
-    <View style={styles.container}>
-      <FlatList
-        style={styles.container}
-        columnWrapperStyle={styles.row}
-        data={data}
-        numColumns={numColumns}
-        renderItem={({ item, index }) => (
-          <View
-            style={[
-              {
-                flex: 1 / numColumns,
-                paddingLeft: paddingHorizontal,
-                paddingBottom: gap,
-                paddingRight: gap,
-              },
-              firstRowElementStyle(index),
-              lastRowChildStyle(index),
-              lastOddChildStyle(index),
-            ]}
-          >
-            {renderItem(item, index)}
-          </View>
-        )}
-        showsVerticalScrollIndicator={false}
-        keyExtractor={(_item, index) => 'grid-list-item_' + index}
-        {...props}
-      />
-    </View>
+    <FlatList
+      columnWrapperStyle={styles.row}
+      data={data}
+      numColumns={numColumns}
+      renderItem={({ item, index }) => (
+        <View
+          style={[
+            {
+              flex: 1 / numColumns,
+              paddingLeft: paddingHorizontal,
+              paddingBottom: gap,
+              paddingRight: gap,
+            },
+            firstRowElementStyle(index),
+            lastRowChildStyle(index),
+            lastOddChildStyle(index),
+          ]}
+        >
+          {renderItem(item, index)}
+        </View>
+      )}
+      showsVerticalScrollIndicator={false}
+      keyExtractor={getKey}
+      {...props}
+    />
   );
 }
 
@@ -83,8 +89,5 @@ const styles = StyleSheet.create({
   row: {
     flex: 1,
     justifyContent: 'flex-start',
-  },
-  container: {
-    flex: 1,
   },
 });
