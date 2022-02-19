@@ -1,0 +1,22 @@
+{
+  "name": "grid-flatlist-react-native-example",
+  "displayName": "GridFlatlistReactNative Example",
+  "expo": {
+    "name": "grid-flatlist-react-native-example",
+    "slug": "grid-flatlist-react-native-example",
+    "description": "Example app for grid-flatlist-react-native",
+    "privacy": "public",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
