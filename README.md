@@ -11,6 +11,7 @@ Simple [FlatList](https://reactnative.dev/docs/flatlist#itemseparatorcomponent) 
 ⭐ Shadow around elements not clipped
 
 ![vs](https://user-images.githubusercontent.com/93822098/154815970-735fad6c-6204-46ef-aae3-7f82ac585c80.png#gh-light-mode-only)
+![vs dark](https://user-images.githubusercontent.com/93822098/154816485-0bee3d2d-4490-426b-b48b-287ec280acfd.png#gh-dark-mode-only)
 
 ### Demo
 [![Vector](https://user-images.githubusercontent.com/93822098/154816145-9a68b06b-292a-4b51-a854-7a60d74abaf3.png#gh-dark-mode-only) Grid Flatlist Example](https://snack.expo.dev/@daniil8k/grid-flatlist-example)
