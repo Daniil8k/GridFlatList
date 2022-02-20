@@ -32,14 +32,17 @@
     "bootstrap": "yarn example && yarn && yarn pods"
   },
   "keywords": [
+    "grid-flatlist-react-native",
     "react-native",
-    "ios",
-    "android",
-    "responsive-grid",
+    "grid-flatlist",
     "flat-list",
-    "list-view",
-    "section-list",
-    "grid-view"
+    "responsive-grid",
+    "flat-list-no-stretching",
+    "responsive",
+    "react-native-flatlist",
+    "flatlist-alternative",
+    "layout-flatlist",
+    "flatlist-based"
   ],
   "repository": "https://github.com/Daniil8k/grid-flatlist-react-native",
   "author": "Daniil <93822098+Daniil8k@users.noreply.github.com> (https://github.com/Daniil8k)",
