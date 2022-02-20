@@ -1,17 +1,22 @@
 # React Native Grid Flatlist
 
-![npm version](https://img.shields.io/npm/v/grid-flatlist-react-native.svg?colorB=brightgreen&style=flat-square)
+![downloads](https://img.shields.io/npm/dw/grid-flatlist-react-native)
+![weight](https://img.shields.io/bundlephobia/min/grid-flatlist-react-native)
+![npm version](https://img.shields.io/npm/v/grid-flatlist-react-native)
 
-Simple [FlatList](https://reactnative.dev/docs/flatlist#itemseparatorcomponent) with two or more columns.😎
+Simple **Grid FlatList** with two or more columns.
 
-⭐ No stretching last item
+![Group 23](https://user-images.githubusercontent.com/93822098/154843258-225805bc-a9d3-46ae-8c9d-3c57afe3b340.png)
 
-⭐ Spacing between items
+⭐ The last item is not stretching
 
-⭐ Shadow around elements not clipped
+⭐ Equal spacing between items
 
-![vs](https://user-images.githubusercontent.com/93822098/154815970-735fad6c-6204-46ef-aae3-7f82ac585c80.png#gh-light-mode-only)
+⭐ Shadow around each item is not clipped
 
+⭐ Any [Native FlatList properties](https://reactnative.dev/docs/flatlist#itemseparatorcomponent) are appliable
+
+⭐ Lightweight
 ### Demo
 [![Vector](https://user-images.githubusercontent.com/93822098/154816145-9a68b06b-292a-4b51-a854-7a60d74abaf3.png#gh-dark-mode-only) Grid Flatlist Example](https://snack.expo.dev/@daniil8k/grid-flatlist-example)
 
@@ -47,8 +52,12 @@ import GridFlatList from 'grid-flatlist-react-native';
 | gap | Number | 12  | Spacing between each item. |
 | paddingHorizontal | Number | 0 | Horizontal padding applied to whole list. |
 | paddingTop | Number | 0 | Top padding applied to whole list. |
+| ... | ... | ... |  Any [Native FlatList properties](https://reactnative.dev/docs/flatlist#itemseparatorcomponent) are appliable. |
 
-#### Any [FlatList properties](https://reactnative.dev/docs/flatlist#itemseparatorcomponent) are appliable
+## Support
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/dkob2852E)
+
 ## License
 
 MIT
