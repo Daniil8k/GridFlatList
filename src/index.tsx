@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { forwardRef, ForwardedRef } from 'react';
 
 import { View, StyleSheet, FlatList, FlatListProps } from 'react-native';
 
@@ -11,12 +12,13 @@ interface ExtraProps {
   gap?: number;
   paddingHorizontal?: number;
   paddingTop?: number;
+  [others: string]: any;
 }
 
 interface GridFlatListInterface
   extends SimpleSpread<FlatListProps<any>, ExtraProps> {}
 
-export default function GridFlatList({
+function GridFlatList({
   data,
   renderItem,
   numColumns = 2,
@@ -91,3 +93,8 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
   },
 });
+
+export default forwardRef(
+  (props: GridFlatListInterface, ref: ForwardedRef<FlatList<any>>) =>
+    GridFlatList({ ref, ...props })
+);

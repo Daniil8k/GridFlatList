@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { StatusBar, StyleSheet, View, Text, Image } from 'react-native';
 import catNames from 'cat-names';
 import { Slider } from '@miblanchard/react-native-slider';
