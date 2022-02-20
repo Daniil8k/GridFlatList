@@ -1,18 +1,22 @@
 # React Native Grid Flatlist
 
-![npm version](https://img.shields.io/npm/v/grid-flatlist-react-native.svg?colorB=brightgreen&style=flat-square)
+![downloads](https://img.shields.io/npm/dw/grid-flatlist-react-native)
+![weight](https://img.shields.io/bundlephobia/min/grid-flatlist-react-native)
+![npm version](https://img.shields.io/npm/v/grid-flatlist-react-native)
 
-Simple **FlatList** with two or more columns. 😎
+Simple **Grid FlatList** with two or more columns.
 
-⭐ The last element is not stretching
+![Group 23](https://user-images.githubusercontent.com/93822098/154843258-225805bc-a9d3-46ae-8c9d-3c57afe3b340.png)
 
-⭐ Equal Spacing Between Elements
+⭐ The last item is not stretching
 
-⭐ Shadow around elements is not clipped
+⭐ Equal spacing between items
 
-![vs](https://user-images.githubusercontent.com/93822098/154815970-735fad6c-6204-46ef-aae3-7f82ac585c80.png#gh-light-mode-only)
-![vs dark](https://user-images.githubusercontent.com/93822098/154816485-0bee3d2d-4490-426b-b48b-287ec280acfd.png#gh-dark-mode-only)
+⭐ Shadow around each item is not clipped
 
+⭐ Any [Native FlatList properties](https://reactnative.dev/docs/flatlist#itemseparatorcomponent) are appliable
+
+⭐ Lightweight
 ### Demo
 [![Vector](https://user-images.githubusercontent.com/93822098/154816145-9a68b06b-292a-4b51-a854-7a60d74abaf3.png#gh-dark-mode-only) Grid Flatlist Example](https://snack.expo.dev/@daniil8k/grid-flatlist-example)
 
