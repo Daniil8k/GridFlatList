@@ -9,22 +9,31 @@ interface ExtraProps {
   data: any[];
   renderItem: Function;
   numColumns?: number;
+  ref?: ForwardedRef<FlatList<any>>;
   gap?: number;
   paddingHorizontal?: number;
   paddingTop?: number;
-  [others: string]: any;
+  showsVerticalScrollIndicator?: boolean;
+  keyExtractor?: (item: any, index: number) => string;
 }
 
 interface GridFlatListInterface
   extends SimpleSpread<FlatListProps<any>, ExtraProps> {}
 
+const randomKeyExtractor = (item: any, index: number): string => {
+  return item.id ? item.id : 'grid-flat-list-item_' + index + Math.random();
+};
+
 function GridFlatList({
+  ref,
   data,
   renderItem,
   numColumns = 2,
   gap = 12,
   paddingHorizontal = 2,
   paddingTop = 2,
+  showsVerticalScrollIndicator = false,
+  keyExtractor = randomKeyExtractor,
   ...props
 }: GridFlatListInterface) {
   const firstRowElementStyle = (index: number) => {
@@ -54,12 +63,9 @@ function GridFlatList({
     return null;
   };
 
-  const getKey = (item: any, index: number) => {
-    return item.id ? item.id : 'grid-flat-list-item_' + index + Math.random();
-  };
-
   return (
     <FlatList
+      ref={ref}
       columnWrapperStyle={styles.row}
       data={data}
       numColumns={numColumns}
@@ -80,8 +86,8 @@ function GridFlatList({
           {renderItem(item, index)}
         </View>
       )}
-      showsVerticalScrollIndicator={false}
-      keyExtractor={getKey}
+      showsVerticalScrollIndicator={showsVerticalScrollIndicator}
+      keyExtractor={keyExtractor}
       {...props}
     />
   );

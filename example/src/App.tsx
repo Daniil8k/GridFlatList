@@ -8,6 +8,7 @@ import GridFlatList from '../../src/index';
 export default function App() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const fl = useRef(null);
 
   const fetchCats = () => {
     fetch('https://api.thecatapi.com/v1/images/search?limit=5&page=1')
@@ -29,6 +30,13 @@ export default function App() {
 
   useEffect(() => {
     fetchCats();
+    setTimeout(() => {
+      fl.current.setNativeProps({
+        style: {
+          backgroundColor: 'red',
+        },
+      });
+    }, 5000);
   }, []);
 
   const getMarkColor = (value: number) => {
@@ -85,6 +93,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <GridFlatList
+        ref={fl}
         data={data}
         renderItem={renderItem}
         paddingHorizontal={10}
