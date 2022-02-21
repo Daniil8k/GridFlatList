@@ -52,6 +52,7 @@ import GridFlatList from 'grid-flatlist-react-native';
 | gap | Number | 12  | Spacing between each item. |
 | paddingHorizontal | Number | 0 | Horizontal padding applied to whole list. |
 | paddingTop | Number | 0 | Top padding applied to whole list. |
+| showsVerticalScrollIndicator | Boolean | false | When true, shows a vertical scroll indicator |
 | ... | ... | ... |  Any [Native FlatList properties](https://reactnative.dev/docs/flatlist#itemseparatorcomponent) are appliable. |
 
 ## Support
