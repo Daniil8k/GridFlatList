@@ -3,6 +3,8 @@
 ![downloads](https://img.shields.io/npm/dw/grid-flatlist-react-native)
 ![weight](https://img.shields.io/bundlephobia/min/grid-flatlist-react-native)
 ![npm version](https://img.shields.io/npm/v/grid-flatlist-react-native)
+![React](https://img.shields.io/badge/react-v16-blue)
+![TypeScript](https://img.shields.io/badge/typescript-v4-orange)
 
 Simple **Grid FlatList** with two or more columns.
 
